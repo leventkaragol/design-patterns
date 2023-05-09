@@ -10,6 +10,6 @@ export class Consumer2 {
 
             const responseData = await loadBalancer.callEndpoint();
 
-        }, 1000);
+        }, 600);
     }
 }
