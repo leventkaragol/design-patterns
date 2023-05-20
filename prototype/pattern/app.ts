@@ -30,7 +30,6 @@ console.dir(birthdateProject, {depth: null});
 
 let copyProject = birthdateProject.clone();
 
-
 console.log();
 console.log("Kopya Proje Nesnesi");
 console.log("------------------------------------------------------------");

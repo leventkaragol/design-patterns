@@ -1,6 +1,7 @@
 import {Project} from "./project";
 import {Task} from "./task";
 import {Resource} from "./resource";
+import {ProjectCloner} from "./project-cloner";
 
 // İlk projenin tanımlanması
 
@@ -28,18 +29,7 @@ console.dir(birthdateProject, {depth: null});
 
 // Projenin kopyalanması
 
-let copyProject = new Project(birthdateProject.projectName);
-
-for (let task of birthdateProject.tasks) {
-
-    let copyTask = new Task(task.taskName, task.startDate, task.endDate);
-
-    for (let resource of task.resources) {
-        copyTask.addResource(new Resource(resource.resourceName, resource.quantity));
-    }
-
-    copyProject.addTask(copyTask);
-}
+let copyProject = ProjectCloner.cloneProject(birthdateProject);
 
 console.log();
 console.log("Kopya Proje Nesnesi");
