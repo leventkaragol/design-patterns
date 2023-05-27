@@ -6,6 +6,8 @@ const weatherReportService = new WeatherReportService(new WeatherForecastProxy(n
 
 weatherReportService.report();
 
+console.log();
+
 setTimeout(() => {
     weatherReportService.report();
 }, 5000);
