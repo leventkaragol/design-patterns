@@ -7,7 +7,7 @@ export class UserService {
         }
     }
 
-    updateOrderHistory(userId: string, orderId: string) {
+    updateOrderHistory(userId: string, orderId: string): void {
         console.log(`${orderId} numaralı sipariş ${userId} kullanıcısının geçmişine işlendi`);
     }
 

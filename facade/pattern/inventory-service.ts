@@ -9,11 +9,11 @@ export class InventoryService {
         };
     }
 
-    increaseStock(productId: string, quantity: number) {
+    increaseStock(productId: string, quantity: number): void {
         console.log(`${productId} ürününün stok adedi ${quantity} arttırıldı`);
     }
 
-    decreaseStock(productId: string, quantity: number) {
+    decreaseStock(productId: string, quantity: number): void {
         console.log(`${productId} ürününün stok adedi ${quantity} azaltıldı`);
     }
 }

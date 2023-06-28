@@ -20,7 +20,7 @@ export class OrderFacade {
         this.notificationService = new NotificationService();
     }
 
-    placeOrder(userId: string, productId: string) {
+    placeOrder(userId: string, productId: string): void {
 
         // Kullanıcı bilgilerini çekiyoruz
         const user = this.userService.getUserDetails(userId);
@@ -57,7 +57,7 @@ export class OrderFacade {
         }
     }
 
-    cancelOrder(orderId: string) {
+    cancelOrder(orderId: string): void {
 
         // Sipariş geçmişi çekiliyor
         const order = this.userService.getOrderHistory(orderId);
