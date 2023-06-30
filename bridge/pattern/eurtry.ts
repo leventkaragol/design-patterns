@@ -3,7 +3,7 @@ import {ICurrency} from "./icurrency";
 export class EURTRY implements ICurrency {
     public getData() {
 
-        // İlgili merkez bankasından döviz kurları çekiliyor
+        // Temsili olarak ilgili merkez bankasından döviz kurları çekiliyor
         return [
             {
                 date: "2020-06-26",

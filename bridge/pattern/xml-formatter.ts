@@ -1,7 +1,7 @@
 import {IFormatter} from "./iformatter";
 
 export class XMLFormatter implements IFormatter {
-    formatData(data: any[]) {
+    public formatData(data: any[]) {
 
         // Veri XML formatına çevriliyor (Parite için kapanış değerini alıyoruz)
         let parityList = data.map((x) => {

@@ -8,7 +8,7 @@ export class CurrencyService {
     ) {
     }
 
-    getHistoricalData() {
+    public getHistoricalData() {
         const data = this.currencyImplementor.getData();
         return this.formatImplementor.formatData(data);
     }

@@ -22,7 +22,7 @@ export class GBPTRYService {
 
     private getData() {
 
-        // İlgili merkez bankasından döviz kurları çekiliyor
+        // Temsili olarak ilgili merkez bankasından döviz kurları çekiliyor
         return [
             {
                 date: "2020-06-26",
@@ -46,7 +46,7 @@ export class GBPTRYService {
         ];
     }
 
-    getHistoricalData(format: "json" | "xml") {
+    public getHistoricalData(format: "json" | "xml") {
 
         const data = this.getData();
 
