@@ -1,13 +1,11 @@
 export class Dispenser {
-    private noteValue: number;
 
-    constructor(noteValue: number) {
-        this.noteValue = noteValue;
+    constructor(private banknoteValue: number) {
     }
 
     dispense(quantity: number): void {
 
         // Para kasasına sinyal gönderiliyor
-        console.log(`Banknot: ${this.noteValue}, Adet: ${quantity}`);
+        console.log(`Banknot: ${this.banknoteValue}, Adet: ${quantity}`);
     }
 }

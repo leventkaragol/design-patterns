@@ -2,10 +2,8 @@ import {IDispenser} from "./idispenser";
 
 export class Dispenser implements IDispenser {
     private nextDispenser?: IDispenser;
-    private noteValue: number;
 
-    constructor(noteValue: number) {
-        this.noteValue = noteValue;
+    constructor(private banknoteValue: number) {
     }
 
     setNext(dispenser: IDispenser): IDispenser {
@@ -15,14 +13,14 @@ export class Dispenser implements IDispenser {
 
     dispense(amount: number): number {
 
-        if (amount >= this.noteValue) {
+        if (amount >= this.banknoteValue) {
 
             // Belirtilen tutar bu kasa için uygun, adet hesaplanıyor
-            const quantity = Math.floor(amount / this.noteValue);
-            const remainingAmount = amount % this.noteValue;
+            const quantity = Math.floor(amount / this.banknoteValue);
+            const remainingAmount = amount % this.banknoteValue;
 
             // Para kasasına sinyal gönderiliyor
-            console.log(`Banknot: ${this.noteValue}, Adet: ${quantity}`);
+            console.log(`Banknot: ${this.banknoteValue}, Adet: ${quantity}`);
 
             // Kalan tutar için işlem zincirde bir sonraki birime yönlendiriliyor
             return this.nextDispenser ? this.nextDispenser.dispense(remainingAmount) : remainingAmount;
