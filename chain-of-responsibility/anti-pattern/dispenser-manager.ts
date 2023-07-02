@@ -24,7 +24,7 @@ export class DispenserManager {
         let remainingAmount = amount;
 
         // Tutar için gerekli 100'lük banknot sayısı bulunuyor
-        const dispenser100Quantity = Math.floor(amount / 100);
+        const dispenser100Quantity = Math.floor(remainingAmount / 100);
 
         if (dispenser100Quantity > 0) {
 
